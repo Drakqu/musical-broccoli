@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Chwedish Stew </title>
+<style>
+	html, body 
+	{ 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    height: 100%;
+	}
+	.circle-main
+	{
+		height: auto;
+		width: 30%;
+		margin: 35%;
+		background-color: #bbb;
+		border-radius: 50%;
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+	.circle-small
+	{
+		height: auto;
+		width: 40%;
+		margin: auto;
+		background-color: #bbb;
+		border-radius: 50%;
+		padding-top: 15%;
+		padding-bottom: 15%;
+		position:absolute;
+		left:300px;
+		top:300px;
+	}
+	.circle-size 
+	{
+		top:0%;
+		left: 0%;
+		width: 140%;
+		height: 110%;
+	}
+	.green {
+  	background: green;
+	left: 50%;
+	top: 250%;
+	}
+	
+	.red {
+  	background: red;
+	left: 250%;
+	top: 50%;
+	}
+	
+	.blue {
+	background: blue;
+	margin: 250px;
+	transform-origin: top left;
+	}
+	
+	.rotate
+	{
+		background-color: #aaa;
+		width:30%;
+		height:auto;
+		padding-top: 15%;
+		padding-bottom: 15%;
+		margin: auto;
+		border-radius: 50%;
+		-webkit-animation: circle 10s infinite linear;
+	}
+	
+	.main-text
+	{
+		margin:auto;
+        text-align: center;
+	}
+	@-webkit-keyframes circle
+	{
+		from {-webkit-transform: rotateZ(0deg)}
+		to {-webkit-transform: rotateZ(360deg)}
+	}
+	
+</style>
+</head>
+
+<body>
+	<div class="circle-main"><p class="main-text">Welcome to Chwedish Stew! A bit of everything!</p>
+	<div class="rotate">
+		<div class="circle-small circle-size green"><p class="main-text">small</p></div>
+		<div class="circle-small circle-size red"><p class="main-text">small2</p></div>
+		<div class="circle-small circle-size blue"><p class="main-text">small3</p></div>
+		</div>
+		</div>
+	</div>
+</body>
+
+</html>
