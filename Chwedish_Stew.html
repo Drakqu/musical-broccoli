@@ -49,7 +49,7 @@
 }
 
 .at-2-oclock {
-    transform: rotate(60deg) translateY(-330px) rotate(-120deg);
+    transform: rotate(60deg) translateY(-330px) rotate(-60deg);
     z-index: 1; /* Make this slide out from between 12 and 4 o'clock. */
 }
 
@@ -59,26 +59,36 @@
 }
 
 .at-6-oclock {
-    transform: rotate(180deg) translateY(-330px) rotate(-120deg);
+    transform: rotate(180deg) translateY(-330px) rotate(-180deg);
 	z-index: 3;
 }
 
 .at-8-oclock {
-    transform: rotate(240deg) translateY(-330px) rotate(-120deg);
+    transform: rotate(240deg) translateY(-330px) rotate(-240deg);
 	z-index: 4;
 }
 
 .at-10-oclock {
-    transform: rotate(300deg) translateY(-330px) rotate(-120deg);
+    transform: rotate(300deg) translateY(-330px) rotate(-300deg);
 	z-index: 5;
 }
 	
 .rotate {
-	-webkit-animation: circle 10s infinite linear;
+	-webkit-animation: circle 30s infinite linear;
 }
 
 .counterrotate {
-    -webkit-animation: ccircle 10s infinite linear;
+    -webkit-animation: ccircle 30s infinite linear;
+}
+
+#centre:hover p.counterrotate {
+	animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+}
+
+#centre:hover .rotate {
+	animation-play-state: paused;
+	-webkit-animation-play-state: paused;
 }
 	
 @-webkit-keyframes circle {
@@ -87,30 +97,33 @@
 }
 
 @-webkit-keyframes ccircle {
-    from {-webkit-transform: rotateZ(0deg)}
-    to {-webkit-transform: rotateZ(360deg)}
+    from {-webkit-transform: rotateZ(-360deg)}
+    to {-webkit-transform: rotateZ(0deg)}
 }
 	
-.main-text {
-	margin:auto;
-    text-align: center;
-	vertical-align: middle;
+.main-text p {
+	padding: -100%;
+	margin: -10px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
-	
+
 </style>
 
 <div id="centre">
 	<div class="rotate">
-		<div class="middle circle main-text"><div class="counterrotate"><p>Hi</p></div></div>
-		<div class="outer circle at-2-oclock main-text"><div class="counterrotate"><p>his</p></div></div>
-		<div class="outer circle at-4-oclock main-text"><p></p></div>
-		<div class="outer circle at-6-oclock main-text"><p></p></div>
-		<div class="outer circle at-8-oclock main-text"><p></p></div>
-		<div class="outer circle at-10-oclock main-text"><p></p></div>
-		<div class="outer circle at-12-oclock main-text"><p></p></div>
+		<div class="middle circle main-text"><p class="counterrotate">Main</p></div>
+		<div class="outer circle at-2-oclock main-text"><p class="counterrotatep">1</p></div>
+		<div class="outer circle at-4-oclock main-text"><p class="counterrotate">2</p></div>
+		<div class="outer circle at-6-oclock main-text"><p class="counterrotate">3</p></div>
+		<div class="outer circle at-8-oclock main-text"><p class="counterrotate">4</p></div>
+		<div class="outer circle at-10-oclock main-text"><p class="counterrotate">5</p></div>
+		<div class="outer circle at-12-oclock main-text"><p class="counterrotate">6</p></div>
 	</div>
 </div>
-
 </body>
 
 </html>
