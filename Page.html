@@ -1,0 +1,59 @@
+<html>
+<head>
+<style>
+
+#centre {
+    position: fixed;
+    left: 45%;
+    top: 40%;
+}
+
+.top-half-circle {
+    height: 100px;
+    width: 200px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 10px solid gray;
+    border-bottom: 0;
+    box-sizing: border-box;
+    animation: mymove 5s infinite;
+}
+
+.bottom-half-circle {
+    width: 200px;
+    height: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border: 10px solid gray;
+    border-top: 0;
+    box-sizing: border-box;
+    animation: mymove2 5s infinite;
+}
+
+
+@keyframes mymove {
+  0%   {background: red; height: 100px; width: 200px;}  
+  15%  {transform: rotate(90deg) translateX(100px);}
+  20%  {transform: rotate(90deg) translateY(0px) rotate(0deg);}
+  100% {transform: translateY(-2000px);}  
+}
+
+@keyframes mymove2 {  
+  0%   {background: blue; height: 100px; width: 200px;}
+  15%  {transform: rotate(90deg) translateY(100px);}  
+  20%  {transform: rotate(90deg) translateY(100px) rotate(0deg);}
+  100% {transform: translateY(2000px);} 
+}
+
+</style>
+
+<div id="centre">
+<div class="top-half-circle"></div>
+<div class="bottom-half-circle"></div>
+</div>
+
+
+</html>
+
+
+
