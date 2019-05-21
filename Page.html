@@ -5,7 +5,7 @@
 #centre {
     position: fixed;
     left: 45%;
-    top: 40%;
+    top:  35%;
 }
 
 .top-half-circle {
@@ -13,10 +13,10 @@
     width: 200px;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
-    border: 10px solid gray;
+    border: 0px solid gray;
     border-bottom: 0;
     box-sizing: border-box;
-    animation: mymove 5s infinite;
+    animation: topintro 5s;
 }
 
 .bottom-half-circle {
@@ -24,25 +24,113 @@
     height: 100px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    border: 10px solid gray;
+    border: 0px solid gray;
     border-top: 0;
     box-sizing: border-box;
-    animation: mymove2 5s infinite;
+    animation: botintro 5s;
 }
-
-
-@keyframes mymove {
+.circle {
+    border-radius: 50%;
+    position: absolute;
+    left: 5%;
+    top:  40%;
+    animation: links 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.2s;
+    text-align: center;
+    display: table;
+    font-size: 0px;
+}
+.circle2 {
+    border-radius: 50%;
+    position: absolute;
+    left: 25%;
+    top:  40%;
+    animation: links 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.7s;
+    text-align: center;
+    display: table;
+    font-size: 0px;
+}
+.circle3 {
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    top:  40%;
+    animation: links 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+    text-align: center;
+    display: table;
+    font-size: 0px;
+}
+.circle4 {
+    border-radius: 50%;
+    position: absolute;
+    left: 65%;
+    top:  40%;
+    animation: links 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.7s;
+    text-align: center;
+    display: table;
+    font-size: 0px;
+}
+.circle5 {
+    border-radius: 50%;
+    position: absolute;
+    left: 85%;
+    top:  40%;
+    animation: links 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.2s;
+    text-align: center;
+    display: table;
+    font-size: 0px;
+}
+.circle text {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 25px;
+}
+.circle2 text {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 25px;
+}
+.circle3 text {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 25px;
+}
+.circle4 text {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 25px;
+}
+.circle5 text {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 25px;
+}
+@keyframes topintro {
   0%   {background: red; height: 100px; width: 200px;}  
-  15%  {transform: rotate(90deg) translateX(100px);}
-  20%  {transform: rotate(90deg) translateY(0px) rotate(0deg);}
-  100% {transform: translateY(-2000px);}  
+  15%  {background: red; transform: rotate(90deg) translateX(100px);}
+  30%  {background: red; transform: rotate(90deg) translateY(0px) rotate(0deg);}
+  100% {background: red; transform: translateX(1000px);}  
 }
 
-@keyframes mymove2 {  
+@keyframes botintro {  
   0%   {background: blue; height: 100px; width: 200px;}
-  15%  {transform: rotate(90deg) translateY(100px);}  
-  20%  {transform: rotate(90deg) translateY(100px) rotate(0deg);}
-  100% {transform: translateY(2000px);} 
+  15%  {background: blue; transform: rotate(90deg) translateY(100px);}  
+  30%  {background: blue; transform: rotate(90deg) translateY(100px) rotate(0deg);}
+  100% {background: blue; transform: translateX(-1000px);} 
+}
+
+@keyframes links {
+  0%   {height: 10px; width: 10px;}  
+  100% {background: red; font-size: 30px; height: 150px; width: 150px;}
 }
 
 </style>
@@ -51,8 +139,11 @@
 <div class="top-half-circle"></div>
 <div class="bottom-half-circle"></div>
 </div>
-
-
+<div class="circle"><text>This is a test</text></div>
+<div class="circle2"><text>Hello</text></div>
+<div class="circle3"><text>How's it going?</text></div>
+<div class="circle4"><text>Hmmm</text></div>
+<div class="circle5"><text>Oh noes!</text></div>
 </html>
 
 
