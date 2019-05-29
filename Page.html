@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html>
+<title>Chwedish Stew </title>
 <head>
 <style>
 #centre {
@@ -8,7 +10,7 @@
 }
 .top-half-circle {
     height: 100px;
-    width: 200px;
+    width:  200px;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
     border: 0px solid gray;
@@ -17,8 +19,8 @@
     animation: topintro 5s;
 }
 .bottom-half-circle {
-    width: 200px;
-    height: 100px;
+    height: 100px;    
+    width:  200px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     border: 0px solid gray;
@@ -92,6 +94,7 @@
   padding: 0 25px;
   animation: fadein 6.95s;
   font-size: 30px;
+  position: absolute;
 }
 .circle2 text {
   display: table-cell;
@@ -99,6 +102,7 @@
   padding: 0 25px;
   animation: fadein 6.9s;
   font-size: 30px;
+  position: absolute;
 }
 .circle3 text {
   display: table-cell;
@@ -106,6 +110,7 @@
   padding: 0 25px;
   animation: fadein 6.85s;
   font-size: 30px;
+  position: absolute;
 }
 .circle4 text {
   display: table-cell;
@@ -113,6 +118,7 @@
   padding: 0 25px;
   animation: fadein 6.9s;
   font-size: 30px;
+  position: absolute;
 }
 .circle5 text {
   display: table-cell;
@@ -120,6 +126,7 @@
   padding: 0 25px;
   animation: fadein 6.95s;
   font-size: 30px;
+  position: absolute;
 }
 @keyframes topintro {
   0%   {background: red; height: 100px; width: 200px;}  
@@ -138,20 +145,34 @@
   100% {background: red; height: 150px; width: 150px;}
 }
 @keyframes fadein {
-    0%       {color:rgba(0, 0, 0, 0);}
-    90%       {color:rgba(0, 0, 0, 0);}
+    0%      {color:rgba(0, 0, 0, 0);}
+    90%     {color:rgba(0, 0, 0, 0);}
     100%    {color:rgba(0, 0, 0, 1);}
 }
 
+.circular-square {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    bottom: 50px;
+    left: -1px;
+    animation: imgfadein 6.95s;
+}
+
+@keyframes imgfadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 </style>
 
 <div id="centre">
 <div class="top-half-circle"></div>
 <div class="bottom-half-circle"></div>
 </div>
-<div class="circle"><text>How's it go</text></div>
-<div class="circle2"><text>How's it go</text></div>
-<div class="circle3"><text>How's it go</text></div>
-<div class="circle4"><text>How's it go</text></div>
-<div class="circle5"><text>How's it go</text></div>
+<div class="circle"> <img class="circular-square" src="food.jpg"/><text>How's it go</text></div>
+<div class="circle2"><img class="circular-square" src="food.jpg"/><text>How's it go</text></div>
+<div class="circle3"><img class="circular-square" src="food.jpg"/><text>How's it go</text></div>
+<div class="circle4"><img class="circular-square" src="food.jpg"/><text>How's it go</text></div>
+<div class="circle5"><img class="circular-square" src="food.jpg"/><text>How's it go</text></div>
 </html>
