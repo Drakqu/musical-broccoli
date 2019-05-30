@@ -4,111 +4,121 @@
 <body>
 <style>
 @keyframes rotate {
-    0%,
-    50% {transform: rotate(0deg) translateY(-210px) rotate(0deg);}
+   0%,
+   50% {transform: rotate(0deg) translateY(-210px) rotate(0deg);}
 }
 #centre {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: rotateZ(0.01deg);
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   transform: rotateZ(0.01deg);
 }
 .circle {
-    background: red;
-    border-radius: 50%;
-    position: absolute;
+   background: red;
+   border-radius: 50%;
+   position: absolute;
 }
 .middle {
-    height: 200px;
-    width: 200px;
-    left: -100px;
-    top: -100px;
+   height: 200px;
+   width: 200px;
+   left: -100px;
+   top: -100px;
 }
 .outer {
-    animation: rotate 2s ease-out 1;
-    height: 120px;
-    width: 120px;
-    left: -60px;
-    top: -60px;
+   animation: rotate 2s ease-out 1;
+   height: 120px;
+   width: 120px;
+   left: -60px;
+   top: -60px;
 }
 .at-12-oclock {
-    transform: rotate(0deg) translateY(-300px) rotate(0deg);
-    z-index: 6;
+   transform: rotate(0deg) translateY(-300px) rotate(0deg);
+   z-index: 6;
 }
 .at-2-oclock {
-    transform: rotate(60deg) translateY(-300px) rotate(-60deg);
-    z-index: 1;
+   transform: rotate(60deg) translateY(-300px) rotate(-60deg);
+   z-index: 1;
 }
 .at-4-oclock {
-    transform: rotate(120deg) translateY(-300px) rotate(-120deg);
-    z-index: 2; 
+   transform: rotate(120deg) translateY(-300px) rotate(-120deg);
+   z-index: 2; 
 }
 .at-6-oclock {
-    transform: rotate(180deg) translateY(-300px) rotate(-180deg);
-    z-index: 3;
+   transform: rotate(180deg) translateY(-300px) rotate(-180deg);
+   z-index: 3;
 }
 .at-8-oclock {
-    transform: rotate(240deg) translateY(-300px) rotate(-240deg);
-    z-index: 4;
+   transform: rotate(240deg) translateY(-300px) rotate(-240deg);
+   z-index: 4;
 }
 .at-10-oclock {
-    transform: rotate(300deg) translateY(-300px) rotate(-300deg);
-    z-index: 5;
+   transform: rotate(300deg) translateY(-300px) rotate(-300deg);
+   z-index: 5;
 }
 	
 .rotate {
-    -webkit-animation: circle 30s infinite linear;
+   -webkit-animation: circle 30s infinite linear;
 }
 .counterrotate {
-    -webkit-animation: ccircle 30s infinite linear;
+   -webkit-animation: ccircle 30s infinite linear;
 }
 #centre:hover p.counterrotate {
-     animation-play-state: paused;
-     -webkit-animation-play-state: paused;
+   animation-play-state: paused;
+   -webkit-animation-play-state: paused;
 }
 #centre:hover .rotate {
-     animation-play-state: paused;
-     -webkit-animation-play-state: paused;
+   animation-play-state: paused;
+   -webkit-animation-play-state: paused;
 }
 	
 @-webkit-keyframes circle {
-    from {-webkit-transform: rotateZ(0deg)}
-    to {-webkit-transform: rotateZ(-360deg)}
+   from {-webkit-transform: rotateZ(0deg)}
+   to {-webkit-transform: rotateZ(-360deg)}
 }
 @-webkit-keyframes ccircle {
-    from {-webkit-transform: rotateZ(-360deg)}
-    to {-webkit-transform: rotateZ(0deg)}
+   from {-webkit-transform: rotateZ(-360deg)}
+   to {-webkit-transform: rotateZ(0deg)}
 }
 	
 .center-img p {
-    padding: -100%;
-    margin: -10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+   padding: -100%;
+   margin: -10px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
 }
 
 .circular-square {
-    border-radius: 50%;
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    bottom: -76px;
-    left: -76px;
+   border-radius: 50%;
+   width: 160px;
+   height: 160px;
+   position: absolute;
+   bottom: -76px;
+   left: -76px;
 }
+.circle text {
+   font-size: 30px;
+   position: absolute;
+   transform: translate(-50%, -50%);
+}
+
+a { 
+   color:white 
+}
+
 </style>
 
 <div id="centre">
 	<div class="rotate">
 		<div class="middle circle center-img"><p class="counterrotate">Main</p></div>
-		<a href="Categories.html"><div class="outer circle at-2-oclock center-img"><p class="counterrotate"><img class="circular-square" src="food.jpg"/></p></div></a>
-		<a href="Categories.html"><div class="outer circle at-4-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/></p></div></a>
-		<a href="Categories.html"><div class="outer circle at-6-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/></p></div></a>
-		<a href="Categories.html"><div class="outer circle at-8-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/></p></div></a>
-		<a href="Categories.html"><div class="outer circle at-10-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/></p></div></a>
-		<a href="Categories.html"><div class="outer circle at-12-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/></p></div></a>
+		<a href="Categories.html"><div class="outer circle at-2-oclock center-img"><p class="counterrotate"><img class="circular-square" src="food.jpg"/><text>How's it go</text></p></div></a>
+		<a href="Categories.html"><div class="outer circle at-4-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/><text>How's it go</text></p></div></a>
+		<a href="Categories.html"><div class="outer circle at-6-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/><text>How's it go</text></p></div></a>
+		<a href="Categories.html"><div class="outer circle at-8-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/><text>How's it go</text></p></div></a>
+		<a href="Categories.html"><div class="outer circle at-10-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/><text>How's it go</text></p></div></a>
+		<a href="Categories.html"><div class="outer circle at-12-oclock center-img"><p class="counterrotate"><img class="circular-square" src="outdoor.jpg"/><text>How's it go</text></p></div></a>
 	</div>
 </div>
 </body>
